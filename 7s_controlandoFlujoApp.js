@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
-// EJ #1 - Acceso a la discoteca según edades
+// EJ #1 - Agregá caminos - Acceso a la discoteca según edades
 
 const puedePasar = (edad) => {
 
@@ -22,7 +22,7 @@ const puedePasar = (edad) => {
   } else {
     console.log("Puede pasar al bar y tomar alcohol.");
   }
-
+ 
 
 if (esImpar) {
   console.log("¿Sabías que tu edad es impar?");
@@ -46,4 +46,42 @@ puedePasar(21);
 //     console.log("¿Sabías que tu edad es impar?");
 // }
 
-// Entonces:
+// EJ #2 Declará una función llamada totalAPagar() que reciba como parámetros: vehiculo y litrosConsumidos.
+
+// Si el vehículo es “coche”, el precio por litro es de $86.
+// ● Si es “moto”, ha de ser $70.
+// ● Si es “autobús”, ha de ser $55.
+// ● Si los litros consumidos están entre 0 y 25, se ha de añadir $50 al total a pagar.
+// ● Si los litros consumidos son mayor a 25, se ha de añadir $25 al total a pagar.
+
+
+let totalAPagar = (vehiculo, litrosConsumidos) =>{
+let calculo=vehiculo*litrosConsumidos
+let adicionalMinLt = calculo+50;
+let adicionalMaxLt = calculo+25;
+
+  let vehiculo=(coche, moto, autobus){
+    if (vehiculo=coche)
+      console.log(`Su total a pagar es de ${calculo}`);
+    } else if (vehiculo=moto){
+      console.log(`Su total a pagar es de ${calculo}`);
+      } else {
+     console.log(`Su total a pagar es de ${calculo}`)
+      };
+    }
+
+    if (litrosConsumidos>0<=25){
+      console.log(`Su total a pagar es de ${adicionalMinLt}`);
+    
+  } else {
+    console.log(`Su total a pagar es de ${adicionalMaxLt}`);}
+
+  }
+  
+      
+      }
+
+let pagoGas = totalAPagar
+totalAPagar(coche, 20);
+
+

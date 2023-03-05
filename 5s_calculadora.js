@@ -1,7 +1,8 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
 function toNumber(str) {
-  return Number(str) || 0;}
+  return Number(str) || 0;
+}
 
 
   // Crear una función sumar, esta deberá recibir dos parámetros y retornar la suma de los mismos.
@@ -95,33 +96,63 @@ parametroPromedio = toNumber(parametroPromedio);
 parametroPromedio2 = toNumber(parametroPromedio2);
 parametroPromedio3 = toNumber(parametroPromedio3);
 
-function promedio (parametroPromedio, parametroPromedio2, parametroPromedio3){
-    let sumaPromedio= sumar (promedio);
-    let resultado=sumaPromedio/3;
-return resultado;
+function calcularPromedio (parametroPromedio, parametroPromedio2, parametroPromedio3){
+    let resultado = sumar(parametroPromedio, parametroPromedio2);
+    resultado = sumar(resultado, parametroPromedio3)/3;
+    return resultado;
 }
 
-let calcularPromedio = promedio();
-console.log(calcularPromedio);
+// function calcuPromedio () {
+//   let acum = 0;
+//   for(let i=0; i < arguments.length; i++) {
+//     acum = acum + arguments[i];
+//   }
+//   return acum / arguments.length;
+// }
+
+// calcuPromedio(10,15,30);
+
+let promedio = calcularPromedio(parametroPromedio,parametroPromedio2,parametroPromedio3);
+console.log(promedio);
 // Crear la función calcularPorcentaje. Esta recibirá dos parámetros: el número total y el porcentaje que se le quiere calcular.
 // Deberá retornar el x%  total. Ejemplo: calcularPorcentaje(300, 15) debe retornar 45, ya que es el 15% de 300.
 // Importante: calcularPorcentaje() deberá utilizar algunas funciones previamente creadas de nuestra calculadora.
 
 let numeroTotal = prompt("Ingresa el número del cual quiere calcular porcentaje: ");
-let porcentaje = prompt("Ingresa el porcentaje, en número, que quiere sea calculado: ");
-
 numeroTotal = toNumber(numeroTotal);
-porcentaje = toNumber(porcentaje);
 
-let calcularPorcentaje = (numeroTotal, porcentaje) => {
-    
-    let divPor=dividir(porcentaje)/100;
-    let resultado=multiplicar(numeroTotal*divPor);
-    return `El porcentaje total es de: ${resultado}`};
+const calcularPorcentaje = (numeroTotal, porcentaje) => {
 
+  let resultado;
 
+  // if (porcentaje% 1 != 0) {  
+  //    // let porcentaje = (500 * 50) / 100; 
+  //   resultado = multiplicar(numeroTotal, porcentaje);
+  //   resultado = dividir(resultado, 100);
+  
+  // } else {
+  //   // let porcentaje2 = 500 * 0.5
+  //   resultado = multiplicar(numeroTotal, porcentaje);
+     
+  // }
+    // let divPor=dividir(porcentaje)/100;
+    // let resultado=multiplicar(numeroTotal*divPor);
+    // return `El porcentaje total es de: ${resultado}`;
 
-let porcentajeFinal = calcularPorcentaje(300, 15);
+  // let porcentaje = (500 * 50) / 100; 
+    resultado = multiplicar(numeroTotal, porcentaje);
+    resultado = dividir(resultado, 100);
+  return resultado
+} 
+
+let porcentaje;
+
+do {
+  porcentaje = prompt("Ingresa el porcentaje, en número, que quiere sea calculado: ");
+  porcentaje = toNumber(porcentaje);
+} while (porcentaje<0 || porcentaje>100);
+
+let porcentajeFinal = calcularPorcentaje(numeroTotal, porcentaje);
 console.log(porcentajeFinal);
 
 
