@@ -30,7 +30,7 @@ if (esImpar) {
 
 };
 
-puedePasar(21);
+// DECLARACION DE FUNCION // puedePasar(21);
 
 // Modificar:
 // 1. Si la edad es negativa, que se muestre en la consola este mensaje: "Error, edad inválida. Por favor ingrese un número válido."
@@ -55,33 +55,36 @@ puedePasar(21);
 // ● Si los litros consumidos son mayor a 25, se ha de añadir $25 al total a pagar.
 
 
-let totalAPagar = (vehiculo, litrosConsumidos) =>{
-let calculo=vehiculo*litrosConsumidos
-let adicionalMinLt = calculo+50;
-let adicionalMaxLt = calculo+25;
+let vehiculo;
+let litrosConsumidos;
 
-  let vehiculo=(coche, moto, autobus){
-    if (vehiculo=coche)
-      console.log(`Su total a pagar es de ${calculo}`);
-    } else if (vehiculo=moto){
-      console.log(`Su total a pagar es de ${calculo}`);
-      } else {
-     console.log(`Su total a pagar es de ${calculo}`)
-      };
-    }
+do {vehiculo = prompt("Indique el tipo de vehiculo que posee (moto, coche, autobus): ");
+} while (vehiculo = moto || coche || autobus);
+
+do {litrosConsumidos = prompt("Indique la cantidad de litros consumidos por su vehiculo: ")
+  litrosConsumidos = toNumber(litrosConsumidos);
+} while (litrosConsumidos<0);
+
+let totalAPagar = (vehiculo, litrosConsumidos) =>{
+  let calculo=vehiculo*litrosConsumidos
+
 
     if (litrosConsumidos>0<=25){
-      console.log(`Su total a pagar es de ${adicionalMinLt}`);
-    
-  } else {
-    console.log(`Su total a pagar es de ${adicionalMaxLt}`);}
+  let adicionalMinLt = calculo+50;
+    } else {
+  let adicionalMaxLt = calculo+25;
+    }
 
-  }
-  
-      
-      }
 
-let pagoGas = totalAPagar
-totalAPagar(coche, 20);
+    if (vehiculo=coche){
+  console.log(`El monto a pagar por el coche corresponde a: ${calculo + adicionalMinLt}`);
+    } else if (vehiculo = moto){
+  console.log(`El monto a pagar por la moto corresponde a: ${calculo + adicionalMinLt}`);    
+    } else (vehiculo=autobus)
+  console.log(`El monto a pagar por el autobus corresponde a: ${calculo + adicionalMinLt}`);
+    };
+
+
+totalAPagar(vehiculo, 20);
 
 
