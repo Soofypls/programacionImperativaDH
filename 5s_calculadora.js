@@ -12,8 +12,8 @@ let pSum2 = prompt("Ingresa el segundo digito a sumar: ");
 pSum = toNumber(pSum);
 pSum2 = toNumber(pSum2);
 
-function sumar(a, b, c) {
-  let resultado = a + b + c;
+function sumar(a, b) {
+  let resultado = a + b;
   return resultado;
 }
 
@@ -91,19 +91,40 @@ let parametroPromedio3 = prompt("Ingresa el primer número para promediar: ");
 
 // numeroCuadrado = toNumber(numeroCuadrado);
 
+parametroPromedio = toNumber(parametroPromedio);
+parametroPromedio2 = toNumber(parametroPromedio2);
+parametroPromedio3 = toNumber(parametroPromedio3);
+
 function promedio (parametroPromedio, parametroPromedio2, parametroPromedio3){
-    let sumaPromedio= sumar (parametroPromedio, parametroPromedio2, parametroPromedio3);
+    let sumaPromedio= sumar (promedio);
     let resultado=sumaPromedio/3;
 return resultado;
 }
 
-let calcularPromedio = promedio(parametroPromedio, parametroPromedio2, parametroPromedio3);
+let calcularPromedio = promedio();
 console.log(calcularPromedio);
 // Crear la función calcularPorcentaje. Esta recibirá dos parámetros: el número total y el porcentaje que se le quiere calcular.
 // Deberá retornar el x%  total. Ejemplo: calcularPorcentaje(300, 15) debe retornar 45, ya que es el 15% de 300.
 // Importante: calcularPorcentaje() deberá utilizar algunas funciones previamente creadas de nuestra calculadora.
 
+let numeroTotal = prompt("Ingresa el número del cual quiere calcular porcentaje: ");
+let porcentaje = prompt("Ingresa el porcentaje, en número, que quiere sea calculado: ");
+
+numeroTotal = toNumber(numeroTotal);
+porcentaje = toNumber(porcentaje);
+
+let calcularPorcentaje = (numeroTotal, porcentaje) => {
+    
+    let divPor=dividir(porcentaje)/100;
+    let resultado=multiplicar(numeroTotal*divPor);
+    return `El porcentaje total es de: ${resultado}`};
+
+
+
+let porcentajeFinal = calcularPorcentaje(300, 15);
+console.log(porcentajeFinal);
+
+
 // Crear una función GeneradorDePorcentaje que recibe dos parámetros y deberá retornar el porcentaje del primero con respecto al segundo.
 // Importante: GeneradorDePorcentaje() deberá utilizar algunas funciones previamente creadas de nuestra calculadora.
 // Ejemplo: GeneradorDePorcentaje(2, 200) deberá retornar 1, ya que 2 es el 1% de 200.
-
