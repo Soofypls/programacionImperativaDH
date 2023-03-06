@@ -58,9 +58,9 @@ if (esImpar) {
 //DECLARACION DE VARIABLES
 let vehiculo;
 let litrosConsumidos;
-let precio;
-let adicional;
+
 let calculo;
+
 
 
 do {
@@ -72,25 +72,33 @@ do {
   // litrosConsumidos = toNumber(litrosConsumidos);
 } while (litrosConsumidos<0);
 
-if (litrosConsumidos > 0 && litrosConsumidos <=25){
-  adicional=50;
-} else {
-  adicional=25;  
+let totalAPagar = (vehiculo, litrosConsumidos) => {
+  let precio;
+  let adicional;
+
+  if (litrosConsumidos > 0 && litrosConsumidos <=25){
+    adicional=50;
+  } else {
+    adicional=25;  
+  }
+
+  if (vehiculo==="coche"){
+    precio=86;
+    // console.log(`El monto a pagar por el coche corresponde a: ${calculo}`);
+  } else if (vehiculo === "moto"){
+    precio=70;
+    // console.log(`El monto a pagar por la moto corresponde a: ${calculo}`);    
+  } else if (vehiculo==="autobus"){
+    precio=55;
+    // console.log(`El monto a pagar por el autobus corresponde a: ${calculo}`);
+  };
+
+  return precio + adicional;
 }
 
-if (vehiculo==="coche"){
-	precio=86;
-  // console.log(`El monto a pagar por el coche corresponde a: ${calculo}`);
-} else if (vehiculo === "moto"){
-  precio=70;
-  // console.log(`El monto a pagar por la moto corresponde a: ${calculo}`);    
-} else if (vehiculo==="autobus"){
-  precio=55;
-  // console.log(`El monto a pagar por el autobus corresponde a: ${calculo}`);
-};
+calculo=totalAPagar(vehiculo, litrosConsumidos);
 
-calculo=precio+adicional;
-
-console.error(`El monto a pagar corresponde a: ${calculo}`)
+console.log(`El monto a pagar corresponde a: ${calculo}`)
 
 
+// EJ#3 
