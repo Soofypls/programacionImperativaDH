@@ -39,66 +39,66 @@ if (esImpar) {
 // }
 // //2. Si tiene 21 años, además de darle la bienvenida, felicitarlo por haber llegado a la mayoría de edad.
 // if (edad = 21) {
-// //     console.log("Bienvenido, felicidades por alcanzar la mayoría de edad, ya puedes ingresar y beber alcohol.");
-// // }
-// // // 3. Si su edad es impar, decirle en cualquiera de los mensajes: "¿Sabías que tu edad es impar?".
-// // if (edad = edad%1) {
-// //     console.log("¿Sabías que tu edad es impar?");
-// // }
-
-// // EJ #2 Declará una función llamada totalAPagar() que reciba como parámetros: vehiculo y litrosConsumidos.
-
-// // Si el vehículo es “coche”, el precio por litro es de $86.
-// // ● Si es “moto”, ha de ser $70.
-// // ● Si es “autobús”, ha de ser $55.
-// // ● Si los litros consumidos están entre 0 y 25, se ha de añadir $50 al total a pagar.
-// // ● Si los litros consumidos son mayor a 25, se ha de añadir $25 al total a pagar.
-
-
-// //DECLARACION DE VARIABLES
-// let vehiculo;
-// let litrosConsumidos;
-
-// let calculo;
-
-
-
-// do {
-//   vehiculo = prompt("Indique el tipo de vehiculo que posee (moto, coche, autobus): ");
-// } while (vehiculo !== "moto" && vehiculo !== "coche" && vehiculo !=="autobus");
-
-// do {
-//   litrosConsumidos = prompt("Indique la cantidad de litros consumidos por su vehiculo: ")
-//   // litrosConsumidos = toNumber(litrosConsumidos);
-// } while (litrosConsumidos<0);
-
-// let totalAPagar = (vehiculo, litrosConsumidos) => {
-//   let precio;
-//   let adicional;
-
-//   if (litrosConsumidos > 0 && litrosConsumidos <=25){
-//     adicional=50;
-//   } else {
-//     adicional=25;  
-//   }
-
-//   if (vehiculo==="coche"){
-//     precio=86;
-//     // console.log(`El monto a pagar por el coche corresponde a: ${calculo}`);
-//   } else if (vehiculo === "moto"){
-//     precio=70;
-//     // console.log(`El monto a pagar por la moto corresponde a: ${calculo}`);    
-//   } else if (vehiculo==="autobus"){
-//     precio=55;
-//     // console.log(`El monto a pagar por el autobus corresponde a: ${calculo}`);
-//   };
-
-//   return precio + adicional;
+//     console.log("Bienvenido, felicidades por alcanzar la mayoría de edad, ya puedes ingresar y beber alcohol.");
+// }
+// // 3. Si su edad es impar, decirle en cualquiera de los mensajes: "¿Sabías que tu edad es impar?".
+// if (edad = edad%1) {
+//     console.log("¿Sabías que tu edad es impar?");
 // }
 
-// calculo=totalAPagar(vehiculo, litrosConsumidos);
+// EJ #2 Declará una función llamada totalAPagar() que reciba como parámetros: vehiculo y litrosConsumidos.
 
-// console.log(`El monto a pagar corresponde a: ${calculo}`)
+// Si el vehículo es “coche”, el precio por litro es de $86.
+// ● Si es “moto”, ha de ser $70.
+// ● Si es “autobús”, ha de ser $55.
+// ● Si los litros consumidos están entre 0 y 25, se ha de añadir $50 al total a pagar.
+// ● Si los litros consumidos son mayor a 25, se ha de añadir $25 al total a pagar.
+
+
+//DECLARACION DE VARIABLES
+let vehiculo;
+let litrosConsumidos;
+
+let calculo;
+
+
+
+do {
+  vehiculo = prompt("Indique el tipo de vehiculo que posee (moto, coche, autobus): ");
+} while (vehiculo !== "moto" && vehiculo !== "coche" && vehiculo !=="autobus");
+
+do {
+  litrosConsumidos = prompt("Indique la cantidad de litros consumidos por su vehiculo: ")
+  // litrosConsumidos = toNumber(litrosConsumidos);
+} while (litrosConsumidos<0);
+
+let totalAPagar = (vehiculo, litrosConsumidos) => {
+  let precio;
+  let adicional;
+
+  if (litrosConsumidos > 0 && litrosConsumidos <=25){
+    adicional=50;
+  } else {
+    adicional=25;  
+  }
+
+  if (vehiculo==="coche"){
+    precio=86;
+    // console.log(`El monto a pagar por el coche corresponde a: ${calculo}`);
+  } else if (vehiculo === "moto"){
+    precio=70;
+    // console.log(`El monto a pagar por la moto corresponde a: ${calculo}`);    
+  } else if (vehiculo==="autobus"){
+    precio=55;
+    // console.log(`El monto a pagar por el autobus corresponde a: ${calculo}`);
+  };
+
+  return precio + adicional;
+}
+
+calculo=totalAPagar(vehiculo, litrosConsumidos);
+
+console.log(`El monto a pagar corresponde a: ${calculo}`)
 
 
 // EJ#3   Local de sandwish
@@ -107,11 +107,8 @@ if (esImpar) {
 
 let hamburguesaBase;
 let tipoPan;
-let adicionales;
-let precioFinal;
-let precioHamburguesa;
-let precioPan;
-let precioAdicinal;
+let adicionales=["queso", "tomate", "lechuga", "cebolla", "mostaza", "mayonesa"];
+let adicionalesAgregados = ["queso", "tomate", "lechuga", "cebolla", "mostaza", "mayonesa"];
 
 do {
   hamburguesaBase = prompt("Indique el tipo de hamburguesa requerida (pollo, carne, veggie): ");
@@ -121,12 +118,26 @@ do {
   tipoPan = prompt("Indique el tipo de pan requerido (blanco, negro, s/gluten): ");
 } while (tipoPan !== "blanco" && tipoPan !== "negro" && tipoPan !=="s/gluten");
 
-do {
-  adicionales = prompt("Indique el primer adicional que desea agregar (queso, tomate, lechuga, cebolla, mayonesa, mostaza): ");
-} while 
-(adicionales !== "queso" && adicionales !== "tomate" && adicionales !=="lechuga"); && adicionales !== "cebolla" && adicionales !== "mayonesa" && adicionales !== "mostaza"
+for(let i=0; i<adicionales.lenght; i++){
 
-let localSandwish = (hamburguesaBase, tipoPan, adicionales) => {
+  let esAgregado;
+  let adicional = adicionales[i];
+
+  do {
+    esAgregado = prompt(`¿Quiere agregar ${adicional} (si/no)?: `);
+  } while ( esAgregado !=="si" && esAgregado !== "no")
+
+  if (esAgregado=== "si"){
+    adicionalesAgregados.push(adicional);
+  }
+}
+
+
+let localSandwish = (hamburguesaBase, tipoPan, adicionalesAgregados) => {
+
+  let precioHamburguesa;
+  let precioPan;
+  let precioAdicional = 0;
 
   if (hamburguesaBase==="pollo"){
     precioHamburguesa=150;
@@ -145,20 +156,23 @@ let localSandwish = (hamburguesaBase, tipoPan, adicionales) => {
     precioPan=75;
   }
 
-
-  if (adicionales==="queso"){
-    precioAdicinal=20;
-  } else if (adicionales==="tomate"){
-    precioAdicinal=15;
-  } else if (adicionales==="lechuga"){
-    precioAdicinal=10;
-  } else if (adicionales==="cebolla"){
-    precioAdicinal=15;
-  } else if (adicionales==="mayonesa"){
-    precioAdicinal=5;
-  } else if (adicionales==="mostaza"){
-    precioAdicinal=5;
+  for(let i=0; i < adicionalesAgregados.lenght; i++){
+    let adicional=adicionalesAgregados[i];
+    if(adicional ==="queso"){
+      precioAdicional = precioAdicional+20;
+    } else if (adicional ==="tomate"){
+      precioAdicional += 15;
+    }else if (adicional ==="lechuga"){
+      precioAdicional += 10;
+    }else if (adicional ==="cebolla"){
+      precioAdicional += 15;
+    }else if (adicional ==="mayonesa"){
+      precioAdicional += 5;
+    }else if (adicional ==="mostaza"){
+      precioAdicional += 5;
+    }
   }
+
 
   precioFinal = precioHamburguesa + precioPan + precioAdicinal;
   return precioFinal
