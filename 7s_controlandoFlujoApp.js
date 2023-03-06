@@ -55,38 +55,42 @@ if (esImpar) {
 // ● Si los litros consumidos son mayor a 25, se ha de añadir $25 al total a pagar.
 
 
+//DECLARACION DE VARIABLES
 let vehiculo;
 let litrosConsumidos;
+let precio;
+let adicional;
+let calculo;
 
-do {vehiculo = prompt("Indique el tipo de vehiculo que posee (moto, coche, autobus): ");
-} while (vehiculo === "moto" || vehiculo === "coche" || vehiculo==="autobus");
 
-do {litrosConsumidos = prompt("Indique la cantidad de litros consumidos por su vehiculo: ")
+do {
+  vehiculo = prompt("Indique el tipo de vehiculo que posee (moto, coche, autobus): ");
+} while (vehiculo !== "moto" && vehiculo !== "coche" && vehiculo !=="autobus");
+
+do {
+  litrosConsumidos = prompt("Indique la cantidad de litros consumidos por su vehiculo: ")
   // litrosConsumidos = toNumber(litrosConsumidos);
 } while (litrosConsumidos<0);
 
-if (litrosConsumidos>0<=25){
-  let adicionalMinLt = calculo+50;
-    } else {
-  let adicionalMaxLt = calculo+25;
-    }
+if (litrosConsumidos > 0 && litrosConsumidos <=25){
+  adicional=50;
+} else {
+  adicional=25;  
+}
 
+if (vehiculo==="coche"){
+	precio=86;
+  // console.log(`El monto a pagar por el coche corresponde a: ${calculo}`);
+} else if (vehiculo === "moto"){
+  precio=70;
+  // console.log(`El monto a pagar por la moto corresponde a: ${calculo}`);    
+} else if (vehiculo==="autobus"){
+  precio=55;
+  // console.log(`El monto a pagar por el autobus corresponde a: ${calculo}`);
+};
 
-let totalAPagar = (vehiculo, litrosConsumidos) =>{
-  let calculo=vehiculo*litrosConsumidos
+calculo=precio+adicional;
 
-
- 
-
-    if (vehiculo==="coche"){
-  console.log(`El monto a pagar por el coche corresponde a: ${calculo + adicionalMinLt}`);
-    } else if (vehiculo === "moto"){
-  console.log(`El monto a pagar por la moto corresponde a: ${calculo + adicionalMinLt}`);    
-    } else (vehiculo==="autobus")
-  console.log(`El monto a pagar por el autobus corresponde a: ${calculo + adicionalMinLt}`);
-    };
-
-
-totalAPagar(moto, 20);
+console.error(`El monto a pagar corresponde a: ${calculo}`)
 
 
