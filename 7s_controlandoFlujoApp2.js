@@ -22,7 +22,6 @@ const prompt = require("prompt-sync")({ sigint: true });
 //   } else {
 //     console.log("Puede pasar al bar y tomar alcohol.");
 //   }
- 
 
 // if (esImpar) {
 //   console.log("¿Sabías que tu edad es impar?");
@@ -54,14 +53,11 @@ const prompt = require("prompt-sync")({ sigint: true });
 // // ● Si los litros consumidos están entre 0 y 25, se ha de añadir $50 al total a pagar.
 // // ● Si los litros consumidos son mayor a 25, se ha de añadir $25 al total a pagar.
 
-
 // //DECLARACION DE VARIABLES
 // let vehiculo;
 // let litrosConsumidos;
 
 // let calculo;
-
-
 
 // do {
 //   vehiculo = prompt("Indique el tipo de vehiculo que posee (moto, coche, autobus): ");
@@ -79,7 +75,7 @@ const prompt = require("prompt-sync")({ sigint: true });
 //   if (litrosConsumidos > 0 && litrosConsumidos <=25){
 //     adicional=50;
 //   } else {
-//     adicional=25;  
+//     adicional=25;
 //   }
 
 //   if (vehiculo==="coche"){
@@ -87,7 +83,7 @@ const prompt = require("prompt-sync")({ sigint: true });
 //     // console.log(`El monto a pagar por el coche corresponde a: ${calculo}`);
 //   } else if (vehiculo === "moto"){
 //     precio=70;
-//     // console.log(`El monto a pagar por la moto corresponde a: ${calculo}`);    
+//     // console.log(`El monto a pagar por la moto corresponde a: ${calculo}`);
 //   } else if (vehiculo==="autobus"){
 //     precio=55;
 //     // console.log(`El monto a pagar por el autobus corresponde a: ${calculo}`);
@@ -100,86 +96,122 @@ const prompt = require("prompt-sync")({ sigint: true });
 
 // console.log(`El monto a pagar corresponde a: ${calculo}`)
 
-
 // EJ#3   Local de sandwish
-
-
 
 let hamburguesaBase;
 let tipoPan;
-let adicionales=["queso", "tomate", "lechuga", "cebolla", "mostaza", "mayonesa", "bacon"];
+let quiereAdicional;
+let adicionales = [
+  {
+    nombre: "queso",
+    precio: 20,
+  },
+  {
+    nombre: "tomate",
+    precio: 15,
+  },
+  {
+    nombre: "lechuga",
+    precio: 10,
+  },
+  {
+    nombre: "cebolla",
+    precio: 15,
+  },
+  {
+    nombre: "mostaza",
+    precio: 5,
+  },
+  {
+    nombre: "mayonesa",
+    precio: 5,
+  },
+  {
+    nombre: "bacon",
+    precio: 30,
+  },
+];
+
 let adicionalesAgregados = [];
 
+do {
+  hamburguesaBase = prompt(
+    "Indique el tipo de hamburguesa requerida (pollo, carne, veggie): "
+  );
+} while (
+  hamburguesaBase !== "carne" &&
+  hamburguesaBase !== "pollo" &&
+  hamburguesaBase !== "veggie"
+);
 
 do {
-  hamburguesaBase = prompt("Indique el tipo de hamburguesa requerida (pollo, carne, veggie): ");
-} while (hamburguesaBase !== "carne" && hamburguesaBase !== "pollo" && hamburguesaBase !=="veggie");
+  tipoPan = prompt(
+    "Indique el tipo de pan requerido (blanco, negro, s/gluten): "
+  );
+} while (tipoPan !== "blanco" && tipoPan !== "negro" && tipoPan !== "s/gluten");
 
 do {
-  tipoPan = prompt("Indique el tipo de pan requerido (blanco, negro, s/gluten): ");
-} while (tipoPan !== "blanco" && tipoPan !== "negro" && tipoPan !=="s/gluten");
+  quiereAdicional = prompt("¿Desea incluir adicionales (si/no): ");
+} while (quiereAdicional !== "si" && quiereAdicional !== "no");
 
+  for (let i = 0; quiereAdicional === "si" && i < adicionales.length; i++) {
+    let esAgregado;
+    let adicional = adicionales[i];
 
-for(let i=0; i<adicionales.length; i++){
+    do {
+      esAgregado = prompt(
+        `¿Quiere agregar ${adicional.nombre} por ${adicional.precio} (si/no)?: `
+      );
+    } while (esAgregado !== "si" && esAgregado !== "no");
 
-  let esAgregado;
-  let adicional = adicionales[i];
-
-  do {
-    esAgregado = prompt(`¿Quiere agregar ${adicional} (si/no)?: `);
-  } while ( esAgregado !=="si" && esAgregado !== "no")
-
-  if (esAgregado=== "si"){
-    adicionalesAgregados.push(adicional);
-    console.log("adicionalesAgregados: ", adicionalesAgregados);
+    if (esAgregado === "si") {
+      adicionalesAgregados.push(adicional);
+    }
   }
-}
-
 
 let localSandwish = (hamburguesaBase, tipoPan, adicionalesAgregados) => {
-
   let precioHamburguesa;
   let precioPan;
   let precioAdicional = 0;
 
-  if (hamburguesaBase==="pollo"){
-    precioHamburguesa=150;
-  } else if (hamburguesaBase==="carne"){
-    precioHamburguesa=200;
-  } else if (hamburguesaBase==="veggie"){
-    precioHamburguesa=100;
+  if (hamburguesaBase === "pollo") {
+    precioHamburguesa = 150;
+  } else if (hamburguesaBase === "carne") {
+    precioHamburguesa = 200;
+  } else if (hamburguesaBase === "veggie") {
+    precioHamburguesa = 100;
   }
 
-
-  if (tipoPan==="blanco"){
-    precioPan=50;
-  } else if (tipoPan==="negro"){
-    precioPan=60;
-  } else if (tipoPan==="s/gluten"){
-    precioPan=75;
+  if (tipoPan === "blanco") {
+    precioPan = 50;
+  } else if (tipoPan === "negro") {
+    precioPan = 60;
+  } else if (tipoPan === "s/gluten") {
+    precioPan = 75;
   }
 
-  for(let i=0; i < adicionalesAgregados.length; i++){
-    let adicional=adicionalesAgregados[i];
-    if(adicional ==="queso"){
-      precioAdicional +=20;
-    } else if (adicional ==="tomate"){
-      precioAdicional += 15;
-    } else if (adicional ==="lechuga"){
-      precioAdicional += 10;
-    } else if (adicional ==="cebolla"){
-      precioAdicional += 15;
-    } else if (adicional ==="mayonesa"){
-      precioAdicional += 5;
-    } else if (adicional ==="mostaza"){
-      precioAdicional += 5;
-    } else if (adicional ==="bacon"){
-      precioAdicional += 30;
-    }
+  for (let i = 0; i < adicionalesAgregados.length; i++) {
+    let adicional = adicionalesAgregados[i];
+    precioAdicional += adicional.precio;
+    // if(adicional ==="queso"){
+    //   precioAdicional +=20;
+    // } else if (adicional ==="tomate"){
+    //   precioAdicional += 15;
+    // } else if (adicional ==="lechuga"){
+    //   precioAdicional += 10;
+    // } else if (adicional ==="cebolla"){
+    //   precioAdicional += 15;
+    // } else if (adicional ==="mayonesa"){
+    //   precioAdicional += 5;
+    // } else if (adicional ==="mostaza"){
+    //   precioAdicional += 5;
+    // } else if (adicional ==="bacon"){
+    //   precioAdicional += 30;
+    // }
   }
 
   return precioHamburguesa + precioPan + precioAdicional;
-}
+};
 
 let precioFinal = localSandwish(hamburguesaBase, tipoPan, adicionalesAgregados);
 console.log(`El monto a pagar corresponde a: ${precioFinal}`);
