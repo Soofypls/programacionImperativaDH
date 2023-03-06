@@ -59,32 +59,34 @@ let vehiculo;
 let litrosConsumidos;
 
 do {vehiculo = prompt("Indique el tipo de vehiculo que posee (moto, coche, autobus): ");
-} while (vehiculo = moto || coche || autobus);
+} while (vehiculo === "moto" || vehiculo === "coche" || vehiculo==="autobus");
 
 do {litrosConsumidos = prompt("Indique la cantidad de litros consumidos por su vehiculo: ")
-  litrosConsumidos = toNumber(litrosConsumidos);
+  // litrosConsumidos = toNumber(litrosConsumidos);
 } while (litrosConsumidos<0);
 
-let totalAPagar = (vehiculo, litrosConsumidos) =>{
-  let calculo=vehiculo*litrosConsumidos
-
-
-    if (litrosConsumidos>0<=25){
+if (litrosConsumidos>0<=25){
   let adicionalMinLt = calculo+50;
     } else {
   let adicionalMaxLt = calculo+25;
     }
 
 
-    if (vehiculo=coche){
+let totalAPagar = (vehiculo, litrosConsumidos) =>{
+  let calculo=vehiculo*litrosConsumidos
+
+
+ 
+
+    if (vehiculo==="coche"){
   console.log(`El monto a pagar por el coche corresponde a: ${calculo + adicionalMinLt}`);
-    } else if (vehiculo = moto){
+    } else if (vehiculo === "moto"){
   console.log(`El monto a pagar por la moto corresponde a: ${calculo + adicionalMinLt}`);    
-    } else (vehiculo=autobus)
+    } else (vehiculo==="autobus")
   console.log(`El monto a pagar por el autobus corresponde a: ${calculo + adicionalMinLt}`);
     };
 
 
-totalAPagar(vehiculo, 20);
+totalAPagar(moto, 20);
 
 
