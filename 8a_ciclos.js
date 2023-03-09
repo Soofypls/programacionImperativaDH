@@ -69,21 +69,13 @@ let ejercicioDosFor = () => {
  */
 
 
-const tabla = (numero) => {
-    if (numero % 1 !== 0 || numero < 1 || numero > 11) {
-      console.log("lo siento el numero no es valido");
-      return;
-    }
-  
-    let i = 1;
-    while (i <= 10) {
-      console.log(`${numero} * ${i} = ${numero * i}`);
-  
-      i++;
-    }
+let ejercicioUnowhile = ()=>{
+    
+go
+tabla(5);
 
-  
-  tabla(5);
 }
+// ejercicioUnowhile();
 
-console.log(numero);
+let 
+
