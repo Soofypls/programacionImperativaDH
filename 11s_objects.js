@@ -32,8 +32,8 @@ saldo es: XXXX”.
  */
 
 
-
-let arrayCuentas = [
+let banco = {
+  clientes : [
     {
       nroCuenta: 5486273622,
       tipoDeCuenta: "Cuenta Corriente",
@@ -64,4 +64,12 @@ let arrayCuentas = [
       saldoEnPesos: 18789,
       titularCuenta: "Jacki Shurmer",
     },
-  ];
+  ],
+
+  consultarCliente : function(titularCuenta){
+    if (this.clientes[3].titularCuenta === titularCuenta) {
+      return this.clientes;
+    }
+  }
+}
+
