@@ -17,17 +17,18 @@ function encontrarGanador(a, b) {
       puntosSegundoParticipante += 1; // =puntosSegundoParticipante + 1
     } else if (a[i] > b[i]) {
       puntosPrimerParticipante += 1;
+    } else if (a[i] === b[i]){
+      puntosPrimerParticipante = 0;
+      puntosSegundoParticipante = 0;
     }
   }
 
   if (puntosSegundoParticipante > puntosPrimerParticipante) {
-    console.log("el ganador es el segundo participante");
-  } else puntosSegundoParticipante < puntosPrimerParticipante;
-  console.log("el ganador es el primer participante");
+        console.log("el ganador es el segundo participante");
+   } else if (puntosSegundoParticipante < puntosPrimerParticipante);{
+        console.log("el ganador es el primer participante"); 
+  } else if (puntosPrimerParticipante === puntosSegundoParticipante){
+        console.log("Hay un empate");}
 }
 
 encontrarGanador(alicia, bob);
-
-// //Si a[i] > b[i], entonces, Alicia recibe 1 punto.
-// Si a[i] < b[i], entonces, Bob recibe 1 punto.
-// Si a[i] === b[i], ninguna persona recibe un punto.
