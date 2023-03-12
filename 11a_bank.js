@@ -8,6 +8,13 @@ forma de representar a los usuarios (cuentas bancarias).
 //         return num[i];
 //     }
 // console.log(num[i]);
+
+function goodPerformance(){
+  console.time("good");
+  let unArray = obje.unArray;
+  for (let i=0, longitud = unArray.length; i<longitud; i++){
+      unArray[i] = "Hola";
+  }
  */
 let arrayCuentas = [
   {
@@ -79,6 +86,7 @@ console.log(banco.deposito("Jarret Lafuente", 100000));
 console.log(banco.extraccion("Jarret Lafuente", 150000));
 
 }
+exerciceBankOne();
 
 
 
@@ -92,9 +100,6 @@ console.log(banco.extraccion("Jarret Lafuente", 150000));
 
 
 
-function goodPerformance(){
-  console.time("good");
-  let unArray = obje.unArray;
-  for (let i=0, longitud = unArray.length; i<longitud; i++){
-      unArray[i] = "Hola";
-  }
+
+
+
