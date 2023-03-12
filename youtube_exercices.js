@@ -1,3 +1,8 @@
+/**
+ * Objetos literales, ejercicio perro (nombre, edad y función ladrar)
+ */
+
+
 let jonmircha = () =>{
 
 let nombre = "kEnAi",
@@ -28,6 +33,10 @@ dog.ladrar();
 }
 //  jonmircha();
 
+
+/**
+ * Objetos literales, ejercicio persona (nombre, segundo nombre)
+ */
 let juanwMedia = ()=>{
 
 
@@ -52,6 +61,9 @@ console.log(person.surname);
 
 // juanwMedia();
 
+/**
+ * Objetos literales, ejercicio nombre usuario y función saludar usando this
+ */
 let juanwMediaThis = () =>{
 
 
@@ -70,3 +82,98 @@ greet();      // this === window
 
 }
 // juanwMediaThis();
+
+/**
+ * Objetos literales, persona, función hablar y datos adicionales
+ */
+let maruluanEspirituSanto =()=>{
+
+
+const person={
+    // key: value
+   id : 1,
+   name: "Marluan",
+   talk: function(){
+    console.log("I'm talking");
+   },
+   isStudent: true,
+   cityInfo:{
+        name: 'Santo Domingo'
+   },
+   schoolInfo: function(){
+    return {
+        name: 'ITLA'
+    }
+   }
+};
+
+person.age = 22;
+
+person.talk();
+console.log(person['id']);   // es lo mismo para invocar.
+console.log(person.cityInfo);
+console.log(person.schoolInfo());
+console.log(person.schoolInfo().name);
+console.log(person.age);
+
+delete person.age;
+console.log(person);
+
+
+}
+// maruluanEspirituSanto();
+
+/**
+ * Orientacion a objetos, clases, metodos y herencia. (Comida,galleta))
+ * nombre de las clases, siempre en mayúsculas para identificarlas mejor. Class crea una plantilla
+ * class crea una plantilla para dar atributos luego, es general.
+ * Los metodos son funciones que podemos llamar dentro de un objeto y que pueden interactuar con sus propiedades
+ */
+
+let codeHive = () => {
+
+// const comida = {
+//     id: 1,
+//     nombre: "manzana",
+//     color: "rojo",
+
+// };
+
+// console.log(comida.nombre);
+
+class Comida {               
+    constructor(id, nombre, color){
+        this.id = id;
+        this.nombre = nombre;
+        this.color = color;
+    }
+
+    nombrar(){
+        return `${this.nombre} de color ${this.color}`;
+    }
+}      
+
+class Galleta extends Comida {
+    constructor(id, nombre, color, sabor){
+        super (id, nombre, color);
+        this.sabor = sabor;
+}
+    nombrarGalleta (){
+return `Galletas ${this.nombre} sabor ${this.sabor}`;
+}
+}
+const manzana = new Comida (1, "manzana", "rojo");
+const pera = new Comida (2, "pera","verde");
+
+const oreo = new Galleta (3, "oreos", "negro", "chocolate");
+const chokis = new Galleta (3, "chokis", "marron", "vainilla");
+
+
+console.log(manzana);
+console.log(pera);
+console.log(oreo.nombrarGalleta());
+console.log(chokis.nombrarGalleta());
+
+}
+
+// codeHive();
