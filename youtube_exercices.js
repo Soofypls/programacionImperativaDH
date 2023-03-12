@@ -308,3 +308,41 @@ props.forEach(name=>{
 
 // carlosAzaustre();
 
+
+/**
+ * Recorrer una matriz con un bucle
+ * 
+ * 
+ * 
+ * 
+ */
+
+// let aProgramar =()=>{
+
+const miArray = [
+    [1,2, 3],
+    [4, 5, 6],
+    [7, 7, 9]
+];
+
+ miArray[0]
+
+ for (let i = 0; i < miArray.length; i++) {
+   console.log(miArray[i]); [1,2,3], [4, 5, 6], [7, 7, 9] 
+   let fila = miArray[i];
+   for (let i = 0; i<fila.length; i++){
+    console.log(fila[i]);
+   }
+
+    
+ }
+
+
+
+
+
+
+
+// }
+
+// aProgramar();
