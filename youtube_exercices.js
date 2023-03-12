@@ -52,27 +52,21 @@ console.log(person.surname);
 
 // juanwMedia();
 
-// let juanwMediaThis = () =>{
+let juanwMediaThis = () =>{
 
 
+let user = {
+    name : 'Juan',
+    greet: greet
+    }
 
+    function greet (){
+    console.log(`Hi, i'm ${this.name}`);
+}
 
+user.greet(); // this === usaer
+greet();      // this === window
+          
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// }
+}
+// juanwMediaThis();
