@@ -58,7 +58,6 @@ console.log(person.surname);
 // }
 
 }
-
 // juanwMedia();
 
 /**
@@ -175,5 +174,137 @@ console.log(oreo.nombrarGalleta());
 console.log(chokis.nombrarGalleta());
 
 }
-
 // codeHive();
+
+
+/**
+ * Objetos literales, makeitreal camp.
+ * Objetos son una grupación de propiedades y cada propiedqad está compuesta por una llae y un valor.
+ * Agregar propiedad, borrar propiedad, recorrer objeto.
+ * for let "variable" in "objeto"{
+ * console.log(carro[llave])};
+ */
+let makeItReal =()=>{
+
+const pedro ={
+        nombre: "Pedro Peréz",
+        edad: 30,
+        activo: true,
+        hobbies: ["programar", "squash", "piano"]
+}
+
+console.log(pedro);
+}
+// makeItReal();
+
+
+/**
+ * Bucles y ciclos
+ * Inicialización, condición de permanencia, actualización de la variable que controla esa condición
+ * while: mientras se cumplan una condicion se ejecutara el codigo entre llaves
+ * do while: lleva una primera ejecucion dentro del bloque del do y despues el while
+ * Array: estructura de datos donde podemos almacenar distintos slots, variables, datos, etc.
+ * 
+ * 
+ * 
+ */
+
+let carlosAzaustre =()=>{
+
+let condicion
+while(condicion){
+    codigo
+}
+
+// let i=1
+// while(i<11){
+//     console.log(i);
+//     i++
+// }
+
+function bucleWhile(num){
+    let i = 0;
+    while (i<num){
+        console.log(i);
+        i++
+    }
+}
+// bucleWhile(11);
+
+function doWhile (num){
+    let i = 0;
+    do{
+        console.log(i);
+        i++;
+    } while(i<num);
+}
+
+// doWhile ();
+
+// for(inicializacion; condicion; actualizacion){
+// }
+
+function bucleFor(num){
+    for (let i=0; i<num; i++){
+        console.log(i);
+    }
+
+}
+
+// bucleFor(11);
+
+// const array = [];
+// array [0] = "1";
+// array [1] = "2";
+// array [0] = "1";
+
+const obje = {
+    unArray: new Array(10000)
+};
+
+function badPerformance(){
+    console.time("bad");
+    for (let i=0; i<obje.unArray.length; i++){
+        obje.unArray[i] = "Hola";
+    }
+    console.timeEnd("bad");
+  
+}
+
+function goodPerformance(){
+    console.time("good");
+    let unArray = obje.unArray;
+    for (let i=0, longitud = unArray.length; i<longitud; i++){
+        unArray[i] = "Hola";
+    }
+console.timeEnd("good");
+
+}
+badPerformance();
+console.log("-------------");
+goodPerformance();
+
+const miArray = [1,2, 3, 4];
+miArray.forEach((item, index)=>{
+console.log(`El valor de la posición ${index} es: ${item}`);
+})
+
+const libro ={
+    titulo: "aprendiendo javascript",
+    autor: "Carlos Azaustre",
+    numPaginas: 100,
+    editorial: "carlosazaustre.es",
+    precio: "24.90",
+}
+const props = Object.getOwnPropertyNames (libro);   // transformar un objeto a array para usar foreach
+props.forEach(name=>{
+    let valor =
+    Object.getOwnPropertyDescriptor(libro, name).value
+    console.log((`La prop ${name} contiene: ${valor}`));
+})
+
+
+}
+
+// carlosAzaustre();
+

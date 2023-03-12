@@ -80,3 +80,21 @@ console.log(banco.extraccion("Jarret Lafuente", 150000));
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+function goodPerformance(){
+  console.time("good");
+  let unArray = obje.unArray;
+  for (let i=0, longitud = unArray.length; i<longitud; i++){
+      unArray[i] = "Hola";
+  }
