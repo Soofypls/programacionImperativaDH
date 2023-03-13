@@ -215,15 +215,25 @@ let banco = {
       if(unArray[i].titularCuenta === titular){
         return unArray[i];
       }
-
       }
+   },
 
-   }
+   deposito: function (titular, cantidad) {
+    let nuevoSaldo = this.consultarCliente(titular).saldoEnPesos + cantidad;
+    console.log(`Deposito realizado, su nuevo saldo es de: $ ${nuevoSaldo}`);
+
+   },
+
+   extraccion: function(titular, monto){
+    let saldoRestante = this.consultarCliente(titular);
+    saldoRestante.saldoEnPesos -= monto
+console.log(`Extraccion realizada correctamente, su nuevo saldo es de: $ ${saldoRestante.saldoEnPesos}`);
+   },
 
 }
-
-let clienteEncontrado = banco.consultarCliente();
 console.log(banco.consultarCliente("Ansel Ardley"));
+console.log(banco.deposito("Ansel Ardley", 100000));
+console.log(banco.extraccion("Ansel Ardley", 0));
 
 
 
