@@ -119,7 +119,7 @@ De lo contrario, deberá imprimir “Extracción realizada correctamente, su nue
 saldo es: XXXX”.
  */
 
-// let bankSoofy =()=>{
+let bankSoofy =()=>{
 
 // let unArray = obje.unArray;
 //   for (let i=0, longitud = unArray.length; i<longitud; i++){
@@ -174,7 +174,58 @@ banco.extraccion("Abigael Natte", 500000);
 
 console.log(banco.consultarCliente ("Abigael Natte")); 
 
-
-// }
+  }
 // bankSoofy();
 
+/**
+ * /**
+ * Bank problem. Try 1, myself
+ * 2. crear un objeto literal llamado “banco”, el cual tendrá una
+propiedad llamada “clientes” de array
+3. Al objeto “banco”, crearle un método llamado consultarCliente, el cual recibirá un
+nombre (titular) por parámetro, deberá buscarlo en la lista de cuentas y retornar el
+objeto cliente que corresponda con ese nombre ingresado.
+Ayuda: let clienteEncontrado = banco.consultarCliente(“Ramon Connell”);
+4. Crear otro método llamado depósito que recibirá dos parámetros: el titular de
+cuenta y una cantidad de dinero a depositar. El método debe obtener la cuenta
+correspondiente y luego sumar la cantidad de dinero a depositar a saldo en pesos.
+Luego, deberá dar un aviso por la consola con el mensaje “Depósito realizado, su
+nuevo saldo es: XXXX”.
+5. Crear un  método llamado extracción que recibirá dos parámetros:
+el titular de cuenta y el monto a extraer. El método debe obtener la cuenta
+correspondiente y restar el monto al saldo actual. En caso de que el resultado sea
+menor a 0, deberá imprimir un mensaje por la consola de “Fondos insuficientes”.
+De lo contrario, deberá imprimir “Extracción realizada correctamente, su nuevo
+saldo es: XXXX”.
+ */
+
+// let bankSoofyDos = () =>{
+
+
+// let unArray = obje.unArray;
+//   for (let i=0, longitud = unArray.length; i<longitud; i++){
+//       unArray[i] = "Hola";
+//   }
+
+let banco = {
+   clientes: arrayCuentas,
+   consultarCliente: function (titular){
+      let unArray = this.clientes;
+      for (let i = 0, longitud = unArray.length; i < longitud; i++) {
+      if(unArray[i].titularCuenta === titular){
+        return unArray[i];
+      }
+
+      }
+
+   }
+
+}
+
+let clienteEncontrado = banco.consultarCliente();
+console.log(banco.consultarCliente("Ansel Ardley"));
+
+
+
+
+// }
