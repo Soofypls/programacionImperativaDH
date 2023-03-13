@@ -86,7 +86,37 @@ console.log(banco.deposito("Jarret Lafuente", 100000));
 console.log(banco.extraccion("Jarret Lafuente", 150000));
 
 }
-exerciceBankOne();
+// exerciceBankOne();
+
+
+/** Object for bank problem, try #2 
+ * 
+*/
+// let exerciceBankTwo = () =>{
+
+
+let banco = {
+  clientes : arrayCuentas,
+  consultarCliente: function(nombreDelTitular){
+  }
+}
+
+for (let i = 0; i < banco.clientes.length; i++) {
+  let clienteEncontrado = banco.consultarCliente(nombreDelTitular);
+  console.log(clienteEncontrado(nombreDelTitular));
+  
+}
+
+
+
+//   // Al objeto “banco”, crearle un método llamado consultarCliente, el cual recibirá un
+// nombre (titular) por parámetro, deberá buscarlo en la lista de cuentas y retornar el
+// objeto cliente que corresponda con ese nombre ingresado.
+// Ayuda: let clienteEncontrado = banco.consultarCliente(“Ramon Connell”);
+
+
+// }
+// exerciceBankTwo();
 
 
 
