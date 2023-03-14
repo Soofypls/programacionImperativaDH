@@ -21,6 +21,17 @@ let loopDePares =(numero)=> {
   }
 // console.log(loopDePares(10));
 
+let loopDePares2 =(numero)=>{
+
+for (let i = 0; i < numero.length; i++) {
+    const element = numero[i];
+    
+}
+
+
+}
+
+
 /**
  * Deberás crear una función llamada loopDeImpares que reciba como parámetros un número y una palabra, 
  * y haga un loop de 0 a 100 mostrando en la consola cada número del loop. Luego, modificar el código para que, 
@@ -78,6 +89,77 @@ let nuevoArreglo =(numero)=>{
 //   nuevoArreglo();
 //   console.log(nuevoArreglo(5));
 
+
+/**
+ * 
+ * Deberás crear una función llamada split que reciba un string 
+ * y simule el comportamiento de la función original. Si no estás 
+ * seguro de cómo funciona, Google puede ayudarte. Importante: 
+ * no podés usar el String.split(). Ejemplo:
+ * split(“hola”) debe retornar [“h”,”o”,”l”,”a”]
+ * split(“chau”) debe retornar [“c”,”h”,”a”,”u”]
+ */
+
+let split=(string)=>{
+
+    let arr = [];
+    for(let i of string) {
+        arr.push(i);
+    }
+    console.log(arr); 
+
+
+
+}
+
+// console.log(split("hola"));
+// console.log(split("chau"));
+
+/**
+ * Deberás crear una función llamada arrayHandler que reciba dos arreglos de igual largo como parámetros 
+ * y muestre en la consola “Soy {elemento de array 1} y yo soy {elemento de array 2}”. 
+ * 
+ */
+
+let arrayUno = [1, 2, 3, 4];
+let arrayDos = ["h","o","l","a"];
+let arrayHandler=(arr, err)=>{
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+    console.log(`Soy ${arr[i]} y yo soy ${err[i]}`);
+    
+}
+
+}
+// arrayHandler(arrayUno,arrayDos );
+
+/**
+ * 
+ * Deberás crear una función llamada palindromo que indique si una palabra es palíndroma o no. Debe retornar 
+ * “true” en caso de que lo sea, y “false” en caso de que no. Ejemplo:
+ * palindromo(“anilina”) debe retornar true
+ * palindromo(“Ana”) debe retornar true
+ * palindromo(“Enrique”) debe retornar false
+ * 
+ */
+
+let palindromo=(palabra)=>{
+let array = ["palabra"]
+
+
+}
+
+
+
+
+
+
+
+
 // }
 
 // exercide13s_1();
+
+
+
