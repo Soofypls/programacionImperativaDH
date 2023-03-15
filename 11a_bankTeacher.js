@@ -266,7 +266,7 @@ let banco = {
     extraccion : function(titular, cantidad){
       let extraccion = this.consultarCliente(titular)
       extraccion.saldoEnPesos -= cantidad;
-      if(extraccion.saldoEnPesos>cantidad){
+      if(extraccion.saldoEnPesos<cantidad === true){
         return console.log("Fondos insuficientes");
       } else {
 console.log(`Extraccion realizada con éxito, su nuevo saldo es de ${extraccion.saldoEnPesos}`);
@@ -277,6 +277,6 @@ console.log(`Extraccion realizada con éxito, su nuevo saldo es de ${extraccion.
   };
 
 banco.deposito("Ansel Ardley", 100000);
-banco.extraccion("Ansel Ardley", 500000);
+banco.extraccion("Ansel Ardley", 50000);
 
 // }

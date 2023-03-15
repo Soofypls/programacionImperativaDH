@@ -148,9 +148,18 @@ let palindromo=(palabra)=>{
 let array = ["palabra"]
 
 
+
+
 }
 
-
+/**
+ * un palindromo es una palabra q se escribe igual para los dos lados.
+ * tendria sentido hacerlo como string, onda, letra por letra, y ver q la ultima
+ * sea igual que la primera, la penultima con la segunda y asi..
+ * como lo haría? mm
+ * servirá un if? Si... 
+ * ejemplos: aerea, radar, reconocer, 
+ */
 
 
 
