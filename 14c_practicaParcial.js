@@ -100,7 +100,6 @@ const ejercicioEdadesMenor18_4 = () => {
 // ejercicioEdadesMenor18_4();
 
 };
-
 const bateriaEjerciciosMayorIgualA18=()=>{
 
 
@@ -164,7 +163,6 @@ const ejercicioEdadesIgual18_2 = () => {
 // ejercicioEdadesIgual18_2();
 
 };
-
 const bateriaEjerciciosObtenerMayor=()=>{
 
 
@@ -251,7 +249,6 @@ console.log(mayorNumero);
 
 // ejercicioObtenerMayor4();
 };
-
 const bateriaEjerciciosObtenerMenor=()=>{
 
 
@@ -306,7 +303,6 @@ console.log(menorNumero);
 // ejercicioObtenerMenor2();
 
 };
-
 const bateriaEjerciciosPromedioEdades =()=>{
 
 const ejercicioPromedio1=()=>{
@@ -385,3 +381,116 @@ console.log(promedio);
 
 
 };
+const bateriaEjerciciosIncremento=()=>{
+
+const ejercicioIncremento1=()=>{
+  const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
+
+  const incrementarEdades = (array) => {
+
+    for (let i = 0; i < array.length; i++) {
+      array[i] += 1;
+    }
+  };
+  
+  incrementarEdades(edades);
+  console.log(edades);
+  
+
+};
+// ejercicioIncremento1();
+
+const ejercicioIncremento2 =()=>{
+
+const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
+
+const incremento =(array)=>{
+
+    let edadIncrementada = [];
+    for (let i = 0; i < array.length; i++) {
+    edadIncrementada[i] += array[i]+1
+  }
+    return edadIncrementada;
+};
+
+let edad = edades(incremento);
+console.log(edad);
+};
+// ejercicioIncremento2();                  
+
+const ejercicioIncremento3 =()=>{                           // ¿Por que no devuelve nada?
+
+  const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
+  
+  const numeroIncrementado =(array)=>{
+
+      for (let i = 0; i < array.length; i++) {
+        array[i] +=1
+      }
+  };
+
+  
+
+numeroIncrementado(edades);
+console.log(edades);
+
+};
+
+// ejercicioIncremento3();
+const ejercicioIncremento4 =()=>{
+
+const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
+const incrementarEdad =(array)=>{
+
+    for (let i = 0; i < array.length; i++) {
+      array[i] += 1      
+    }
+}
+
+incrementarEdad(edades);
+console.log(edades);
+};
+
+// ejercicioIncremento4();
+
+const ejercicioIncremento5 =()=>{
+
+const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
+
+const edadIncrementada =(array)=>{
+
+  for (let i = 0; i < array.length; i++){
+    array[i] += 1
+  }
+};
+
+edadIncrementada(edades);
+console.log(edades);
+
+
+};
+
+// ejercicioIncremento5();
+
+const ejercicioIncremento6=()=>{
+  const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
+
+  const incrementoEdad =(array)=>{
+
+for (let i = 0; i < array.length; i++) {
+  array[i] += 1
+  
+}
+
+  };
+
+  incrementoEdad(edades);
+  console.log(edades);
+
+
+};
+// ejercicioIncremento6();
+
+};
+
+
