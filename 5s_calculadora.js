@@ -159,3 +159,15 @@ console.log(porcentajeFinal);
 // Crear una función GeneradorDePorcentaje que recibe dos parámetros y deberá retornar el porcentaje del primero con respecto al segundo.
 // Importante: GeneradorDePorcentaje() deberá utilizar algunas funciones previamente creadas de nuestra calculadora.
 // Ejemplo: GeneradorDePorcentaje(2, 200) deberá retornar 1, ya que 2 es el 1% de 200.
+
+let multiplicarPar = (n1, n2)=>{
+  let resultado = n1 * n2
+  if (resultado % 2 === 0){
+    return "es par"
+  } else {
+    return "es impar"
+  }
+}
+
+let res = multiplicarPar(3,4)
+console.log(res);

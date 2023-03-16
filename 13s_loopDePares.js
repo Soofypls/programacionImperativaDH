@@ -158,7 +158,20 @@ let array = ["palabra"]
  * sea igual que la primera, la penultima con la segunda y asi..
  * como lo haría? mm
  * servirá un if? Si... 
- * ejemplos: aerea, radar, reconocer, 
+ * ejemplos: aerea, radar, reconocer,
+ * let str = "¡Si, Tu puedes hacerlo!";
+
+console.log(str[0]); // ¡
+console.log(str[1]); // S
+console.log(str[2]); // i
+console.log(str[3]); // ,
+...
+console.log(str[10]); // e
+
+t mensaje = 'Soy un tipo feliz y afortunado';
+console.log(mensaje.split(' ', 4)); 
+
+se podra usar con lenght?
  */
 
 
