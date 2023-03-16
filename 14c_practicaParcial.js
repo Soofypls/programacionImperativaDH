@@ -18,6 +18,10 @@ Incrementar en 1 todas las edades.
  *  const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
  */
 
+const bateriaEjerciciosMenorA18=()=>{
+
+
+
 const ejercicioEdadesMenor18_1 = () => {
   const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
 
@@ -95,6 +99,11 @@ const ejercicioEdadesMenor18_4 = () => {
 };
 // ejercicioEdadesMenor18_4();
 
+};
+
+const bateriaEjerciciosMayorIgualA18=()=>{
+
+
 const ejercicioEdadesMayorIgual18_1 = () => {
   const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
 
@@ -113,6 +122,8 @@ const ejercicioEdadesMayorIgual18_1 = () => {
   console.log(esMayor);
 };
 // ejercicioEdadesMayorIgual18_1();
+
+
 
 const ejercicioEdadesIgual18_1 = () => {
   const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
@@ -151,6 +162,11 @@ const ejercicioEdadesIgual18_2 = () => {
   console.log(resultado);
 };
 // ejercicioEdadesIgual18_2();
+
+};
+
+const bateriaEjerciciosObtenerMayor=()=>{
+
 
 const ejercicioObtenerMayor1 = () => {
   const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
@@ -213,10 +229,159 @@ console.log(edadMAyor);
 
 // ejercicioObtenerMayor3();
 
-// const ejercicioObtenerMayor4  =()=>{
+const ejercicioObtenerMayor4  =()=>{
 
 const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
 
-// };
+const obtenerMayor=(array)=>{
+let esElMayor = array[0];
+
+for (let i = 0; i < array.length; i++) {
+    if(esElMayor<array[i]){
+        esElMayor=array[i];
+    };
+
+};
+return esElMayor;
+};
+
+let mayorNumero = obtenerMayor(edades);
+console.log(mayorNumero);
+};
 
 // ejercicioObtenerMayor4();
+};
+
+const bateriaEjerciciosObtenerMenor=()=>{
+
+
+
+const ejercicioObtenerMenor1 =()=>{
+
+const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
+
+const obtenerMenor =(array)=>{
+
+    let esMenor = array[0];
+
+    for (let i = 0; i < array.length; i++) {
+        if(esMenor>array[i]){
+            esMenor=array[i]
+        };
+        
+    };
+return esMenor
+
+};
+let esElMenor = obtenerMenor(edades);
+console.log(esElMenor);
+
+
+};
+// ejercicioObtenerMenor1();
+
+const ejercicioObtenerMenor2 =()=>{
+
+const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
+
+const obtenerMenor=(array)=>{
+
+    let esMenor = array[0];
+
+    for (let i = 0; i < array.length; i++) {
+      if(esMenor<array[i]){
+        esMenor=array[i]
+      };
+      
+    };
+    return esMenor;
+};
+
+let menorNumero = obtenerMenor(edades);
+console.log(menorNumero);
+
+
+};
+
+// ejercicioObtenerMenor2();
+
+};
+
+const bateriaEjerciciosPromedioEdades =()=>{
+
+const ejercicioPromedio1=()=>{
+
+const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
+
+
+const promedioEdades=(array)=>{
+
+let promedio = [0];
+let suma = Array++
+for (let i = 0; i < array.length; i++) {
+    promedio.push(array[i]) 
+};
+
+return suma/array.length
+};
+
+let promedioFinal = promedioEdades(edades);
+console.log(promedioFinal);
+};
+// ejercicioPromedio1();
+
+const ejercicioPromedio2=()=>{
+
+const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
+
+const promedioEdades = (array) => {
+    let suma = 0;
+  
+    for (let i = 0; i < array.length; i++) {
+      suma += array[i];
+    }
+  
+    return suma / array.length;
+  };
+  
+  let promedio = promedioEdades(edades);
+  console.log(promedio);
+
+};
+// ejercicioPromedio2();
+
+const ejercicioPromedio3=()=>{
+
+const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
+
+const calcularPromedio =(array)=>{
+let suma = 0;
+for (let i = 0; i < array.length; i++) {
+    suma += array[i];
+};
+
+return suma/array.length;
+
+};
+
+let promedio = calcularPromedio(edades);
+console.log(promedio);
+
+};
+// ejercicioPromedio3();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
