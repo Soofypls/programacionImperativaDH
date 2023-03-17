@@ -18,6 +18,8 @@ Incrementar en 1 todas las edades.
  *  const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
  */
 
+
+
 const bateriaEjerciciosMenorA18=()=>{
 
 
@@ -68,8 +70,8 @@ const ejercicioEdadesMenor18_3 = () => {
     let edad = [];
 
     for (let i = 0; i < array.length; i++) {
-      if (array[i] < 18) {
-        edad.push(array[i]);
+      if (array[i] < 18) { 
+         edad.push(array[i]);
       }
     }
     return edad;
@@ -493,4 +495,30 @@ for (let i = 0; i < array.length; i++) {
 
 };
 
+/**
+ * 
+ * Deberás crear una función llamada loopDePares que reciba como parámetro un número y 
+ * haga un loop de 0 a 100 mostrando en la consola cada número del loop. 
+ * En caso de que el número de la iteración sumado con el número pasado por parámetro sea par, 
+ * mostrará en la consola: “El número X es par”.
+ * 
+ */
 
+const ejercicioLoopPares1 =()=>{
+
+  const loopDePares =(numero)=> {
+    for (let i = 0; i <= 100; i++) {
+      if ((i + numero) % 2 === 0) {
+        console.log(`El número ${numero + i} es par`);
+      } else {
+        console.log(i);
+      }
+    };
+  };
+console.log(loopDePares(10));
+
+};
+
+// ejercicioLoopPares1();
+
+const ejercicioLoopPares2 =();
