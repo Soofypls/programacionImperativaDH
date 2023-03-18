@@ -1,11 +1,18 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
+
+const pasarStrANumber=()=>{
 function toNumber(str) {
   return Number(str) || 0;
 }
 
+};
+pasarStrANumber();
 
   // Crear una función sumar, esta deberá recibir dos parámetros y retornar la suma de los mismos.
+
+
+const ejercicioFuncionSumar=()=>{
 
 let pSum = prompt("Ingresa el primer digito a sumar: ");
 let pSum2 = prompt("Ingresa el segundo digito a sumar: ");
@@ -21,6 +28,12 @@ function sumar(a, b) {
 let suma = sumar(pSum, pSum2);
 console.log(suma);
 
+};
+ejercicioFuncionSumar();
+
+
+const ejercicioFuncionRestar=()=>{
+
 // Crear una función restar, la cual deberá recibir dos parámetros y retornar la resta del primero menos el segundo.
 let pRes = prompt("Ingresa el primer digito a restar: ");
 let pRes2 = prompt("Ingresa el segundo digito a restar: ");
@@ -35,6 +48,13 @@ function restar(a, b) {
 
 let resta = restar(pRes, pRes2);
 console.log(resta);
+
+
+};
+ejercicioFuncionRestar();
+
+const ejercicioFuncionMultiplicar=()=>{
+
 
 // Crear una función multiplicar, la misma deberá recibir dos parámetros y retornar el resultado de su multiplicación.
 
@@ -52,6 +72,13 @@ function multiplicar(a, b) {
 let multiplicacion = multiplicar(pMul, pMul2);
 console.log(multiplicacion);
 
+};
+ejercicioFuncionMultiplicar();
+
+
+const ejercicioFuncionDividir =()=>{
+
+
 // 5. Crear una función dividir, la cual recibirá dos parámetros y retornar el resultado de la división del primero sobre el segundo.
 
 let pDiv = prompt("Ingresa el primer digito a dividir: ");
@@ -68,6 +95,13 @@ function dividir(a, b) {
 let division = dividir (pDiv, pDiv2);
 console.log(division);
 
+};
+ejercicioFuncionDividir();
+
+const ejercicioFuncionNumeroAlCuadraro =()=>{
+
+
+
 // Crear una función que se llame cuadradoDeUnNumero, la cual recibe un número como parámetro y deberá retornar ese número elevado al cuadrado.
 // Importante: cuadradoDeUnNumero() deberá utilizar la función multiplicar() para calcular el cuadrado del parámetro ingresado a cuadradoDeUnNumero()
 
@@ -82,6 +116,13 @@ function alCuadrado (numeroCuadrado){
 
 let cuadrado = alCuadrado (numeroCuadrado);
 console.log(cuadrado);
+
+};
+ejercicioFuncionNumeroAlCuadraro();
+
+const ejercicioFuncionPromediar=()=>{
+
+
 
 // Crear la función promedioDeTresNumeros, la misma deberá calcular el promedio de 3 números, que serán ingresados por parámetro.
 // Importante: promedioDeTresNumeros() deberá utilizar algunas funciones previamente creadas de nuestra calculadora.
@@ -114,9 +155,19 @@ function calcularPromedio (parametroPromedio, parametroPromedio2, parametroProme
 
 let promedio = calcularPromedio(parametroPromedio,parametroPromedio2,parametroPromedio3);
 console.log(promedio);
+
+
+
+};
+ejercicioFuncionPromediar();
+
+
 // Crear la función calcularPorcentaje. Esta recibirá dos parámetros: el número total y el porcentaje que se le quiere calcular.
 // Deberá retornar el x%  total. Ejemplo: calcularPorcentaje(300, 15) debe retornar 45, ya que es el 15% de 300.
 // Importante: calcularPorcentaje() deberá utilizar algunas funciones previamente creadas de nuestra calculadora.
+
+const ejercicioCalcularPorcentaje=()=>{
+
 
 let numeroTotal = prompt("Ingresa el número del cual quiere calcular porcentaje: ");
 numeroTotal = toNumber(numeroTotal);
@@ -155,10 +206,12 @@ do {
 let porcentajeFinal = calcularPorcentaje(numeroTotal, porcentaje);
 console.log(porcentajeFinal);
 
+};
+ejercicioCalcularPorcentaje();
 
-// Crear una función GeneradorDePorcentaje que recibe dos parámetros y deberá retornar el porcentaje del primero con respecto al segundo.
-// Importante: GeneradorDePorcentaje() deberá utilizar algunas funciones previamente creadas de nuestra calculadora.
-// Ejemplo: GeneradorDePorcentaje(2, 200) deberá retornar 1, ya que 2 es el 1% de 200.
+const ejercicioFuncionMultiplicarPar=()=>{
+
+
 
 let multiplicarPar = (n1, n2)=>{
   let resultado = n1 * n2
@@ -171,3 +224,13 @@ let multiplicarPar = (n1, n2)=>{
 
 let res = multiplicarPar(3,4)
 console.log(res);
+
+
+
+};
+ejercicioFuncionMultiplicarPar();
+
+// Crear una función GeneradorDePorcentaje que recibe dos parámetros y deberá retornar el porcentaje del primero con respecto al segundo.
+// Importante: GeneradorDePorcentaje() deberá utilizar algunas funciones previamente creadas de nuestra calculadora.
+// Ejemplo: GeneradorDePorcentaje(2, 200) deberá retornar 1, ya que 2 es el 1% de 200.
+
