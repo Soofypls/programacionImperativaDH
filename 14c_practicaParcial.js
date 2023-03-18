@@ -521,4 +521,110 @@ console.log(loopDePares(10));
 
 // ejercicioLoopPares1();
 
-const ejercicioLoopPares2 =();
+// const ejercicioLoopPares2 =();
+
+const ejercicioPalindromo1 = () => {
+
+  let palabra = "teamo";
+
+  const palindrome=(str)=>{
+    
+    let izquierda = 0;
+    let derecha = str.length -1;
+
+    for (let i = 0; i < str.length; i++) {
+      
+      // console.log("izq: ", izquierda, "der: ", derecha);
+      if(str[izquierda]!==str[derecha]){
+        return false;
+      }
+      //  else {
+      //   console.log("izq: ", str[izquierda], "der: ", str[derecha]);
+      // }
+    
+      izquierda += 1;
+      derecha -= 1;
+    }
+
+    return true;
+
+  }
+
+  let resultado = palindrome(palabra);
+  if (resultado === true ) {
+    console.log("Es palindrome");
+    
+  } else{
+    console.log("No es palindrome");
+  }
+
+}
+
+ejercicioPalindromo1();
+
+/**
+ * 
+ * 
+ * izquierda = 0;
+ * derecha = 7;
+ * str izq = r
+ * str der = r
+ * 
+ * izquierda = 1;
+ * derecha = 7;
+ * str izq = e;
+ * str der = e;
+ * 
+ * 
+ * 
+ */
+
+const unObjeto = {
+
+nombre : "Mocosito",
+edad: 36,
+metodo: function () {
+let enamorados = "amor";
+}
+
+}
+
+/**
+ * un objeto que teng los metodos de una calculadora.
+ * suma, rest, mult, division, promedio
+ */
+
+const Calculadora = {
+
+  sumar: function(x, y){
+    return x + y;
+  },
+  restar: function (x, y) {
+    return x - y;
+  },
+  multiplicar: function(x, y){
+    return x * y;
+  },
+
+  dividir: function(x, y){
+    return x / y;
+  },
+
+  promediar: function(array){
+
+    let acumulacion= 0;
+
+    for (let i = 0; i < array.length; i++) {
+      acumulacion = this.sumar(acumulacion, array[i])
+    };
+
+    return this.dividir(acumulacion, array.length);
+  }
+
+};
+
+let resultadoPromedio = Calculadora.promediar([5, 10]);
+console.log(resultadoPromedio);
+
+
+
