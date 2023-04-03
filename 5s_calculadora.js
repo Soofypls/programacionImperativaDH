@@ -7,7 +7,7 @@ function toNumber(str) {
 }
 
 };
-pasarStrANumber();
+// pasarStrANumber();
 
   // Crear una función sumar, esta deberá recibir dos parámetros y retornar la suma de los mismos.
 
@@ -29,7 +29,7 @@ let suma = sumar(pSum, pSum2);
 console.log(suma);
 
 };
-ejercicioFuncionSumar();
+// ejercicioFuncionSumar();
 
 
 const ejercicioFuncionRestar=()=>{
@@ -51,7 +51,7 @@ console.log(resta);
 
 
 };
-ejercicioFuncionRestar();
+// ejercicioFuncionRestar();
 
 const ejercicioFuncionMultiplicar=()=>{
 
@@ -73,7 +73,7 @@ let multiplicacion = multiplicar(pMul, pMul2);
 console.log(multiplicacion);
 
 };
-ejercicioFuncionMultiplicar();
+// ejercicioFuncionMultiplicar();
 
 
 const ejercicioFuncionDividir =()=>{
@@ -96,7 +96,7 @@ let division = dividir (pDiv, pDiv2);
 console.log(division);
 
 };
-ejercicioFuncionDividir();
+// ejercicioFuncionDividir();
 
 const ejercicioFuncionNumeroAlCuadraro =()=>{
 
@@ -118,7 +118,7 @@ let cuadrado = alCuadrado (numeroCuadrado);
 console.log(cuadrado);
 
 };
-ejercicioFuncionNumeroAlCuadraro();
+// ejercicioFuncionNumeroAlCuadraro();
 
 const ejercicioFuncionPromediar=()=>{
 
@@ -159,7 +159,7 @@ console.log(promedio);
 
 
 };
-ejercicioFuncionPromediar();
+// ejercicioFuncionPromediar();
 
 
 // Crear la función calcularPorcentaje. Esta recibirá dos parámetros: el número total y el porcentaje que se le quiere calcular.
@@ -207,7 +207,7 @@ let porcentajeFinal = calcularPorcentaje(numeroTotal, porcentaje);
 console.log(porcentajeFinal);
 
 };
-ejercicioCalcularPorcentaje();
+// ejercicioCalcularPorcentaje();
 
 const ejercicioFuncionMultiplicarPar=()=>{
 
@@ -228,8 +228,10 @@ console.log(res);
 
 
 };
-ejercicioFuncionMultiplicarPar();
+// ejercicioFuncionMultiplicarPar();
 
 // Crear una función GeneradorDePorcentaje que recibe dos parámetros y deberá retornar el porcentaje del primero con respecto al segundo.
 // Importante: GeneradorDePorcentaje() deberá utilizar algunas funciones previamente creadas de nuestra calculadora.
 // Ejemplo: GeneradorDePorcentaje(2, 200) deberá retornar 1, ya que 2 es el 1% de 200.
+
+

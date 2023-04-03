@@ -5,9 +5,9 @@ const ejercicioParcial1 = () => {
       return console.log(
         "Lo siento, uno o mas parámetros no cumple con la condición de ser un número par"
       );
-    } else {
-      return n1 - n2;
     }
+
+    return n1 - n2;
   };
 
   let resultadoRestarPares = restarPares(6, 8);

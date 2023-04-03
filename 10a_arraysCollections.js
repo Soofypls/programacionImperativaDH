@@ -105,3 +105,27 @@ Ejemplo:
 ● join(["h","o","l","a"]) debe retornar el string "hola".
 ● join(["c","h","a,"u"]) debe retornar el string "chau".
  */
+
+
+
+let miserie = ' 0123456789 ';
+
+console.log(miserie.length);                           //Retorna la cantidad total de caracteres del string
+console.log(miserie.indexOf('5'));                   //Busca en el string, el string que recibe como parametro
+console.log(miserie.slice(1));                          // corta el string y devuelve una parte del string donde se aplica
+console.log(miserie.trim());                           // elimina espacios que esten al principio y al final del string
+console.log(miserie.replace('3','4'));                 // reemplaza una parte del string por otra
+console.log(miserie.split(''));                        // Divide un string en partes
+
+
+function dominio (str, dominio) {
+    let str = "digitalhouse.com.ar"
+    let dominio ="http://www."
+
+    return str + dominio
+}
+    
+    return (dominio(str + dominio))
+
+
+
